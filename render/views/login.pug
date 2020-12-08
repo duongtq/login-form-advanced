@@ -1,0 +1,45 @@
+doctype html
+head
+  style.
+    * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-container {
+    width: 30%;
+    margin: auto;
+    float: left;
+    }
+    .form {
+    width: 100%;
+    }
+    .rows {
+    width: 100%;
+    display: block;
+    }
+    .column {
+    width: 80%;
+    display: inline-block;
+    }
+    .labels {
+    width: 30%;
+    float: left;
+    }
+    .inputs {
+    width: 60%;
+    float: right;
+    }
+    .login-button {
+    width: 100%;
+    float: right;
+    }
+.form-container
+  form.form(method='POST' action='/result')
+    .rows
+      .column
+        label.labels Username:
+        input.inputs(type='text' name='username')
+      .column
+        label.labels Password:
+        input.inputs(type='password' name='password')
+      .column.login-button
+        button(type='submit') Log In
